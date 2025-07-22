@@ -1,17 +1,25 @@
-name: holaMundo
-on: 
+name: holamundo
+
+on:
   push:
     branches: [main]
-jobs: 
- build:
-   runs-on: ubuntu-latest
-   steps:
-    - uses: actions/checkout@v3
-    - name: Ejecutar un script
-      run: echo "¡Hola Mundo!"
-      run: npm install -g html-validator-cli
-    - name: validar html
-      run: html-validator --file=index.html
+  pull_request:
+    branches: [main]
 
-    - name: validar css
-      run: css-validator --file=src/index.css
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Usar Node.js
+        run: echo "¡Hola Mundo!"
+      
+      - name: instalando
+        run: npm install -g html-validator-cli
+      - name: validar html
+        run: html-validator --file=index.html
+
+      - name: validar css
+        run: css-validator --file=src/index.css
