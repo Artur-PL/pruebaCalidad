@@ -18,6 +18,7 @@ jobs:
       
       - name: instalando
         run: npm install -g html-validator-cli
+        
       - name: validar html
         run: html-validator --file=index.html
 
