@@ -7,3 +7,9 @@ jobs:
     - uses: actions/checkout@v3
     - name: Ejecutar un script
       run: echo "¡Hola Mundo!"
+      run: npm install -g html-validator-cli
+    - name: validar html
+      run: html-validator --file=index.html
+
+    - name: validar css
+      run: css-validator --file=src/index.css
