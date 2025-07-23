@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
 
       - name: Saludo
         run: echo "¡Hola Mundo!"
@@ -22,9 +23,12 @@ jobs:
       - name: Instalar css-validator
         run: npm install -g css-validator
 
+      - name: Ver estructura de archivos
+        run: ls -R
+
       - name: Validar HTML
-        run: html-validator --file=TYPESCRIPT-FRONTEND-CRUD/index.html  
+        run: html-validator --file=./index.html --verbose
 
       - name: Validar CSS
-        run: css-validator --file=src/interfaces/index.css
+        run: css-validator ./src/index.css
 
