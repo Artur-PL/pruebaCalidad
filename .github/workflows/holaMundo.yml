@@ -13,14 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: ejecutar un script
+      - name: Saludo
         run: echo "¡Hola Mundo!"
-      
-      - name: instalando
+
+      - name: Instalar html-validator
         run: npm install -g html-validator-cli
 
-      - name: validar html
-        run: html-validator --file=index.html
+      - name: Instalar css-validator
+        run: npm install -g css-validator
 
-      - name: validar css
-        run: css-validator --file=src/index.css
+      - name: Validar HTML
+        run: html-validator --file=index.html  # <-- Cambia ruta si es necesario
+
+      - name: Validar CSS
+        run: css-validator --file=src/index.css    # <-- Cambia ruta si es necesario
