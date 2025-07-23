@@ -23,9 +23,12 @@ jobs:
       - name: Instalar css-validator
         run: npm install -g css-validator
 
+      - name: Ver estructura de archivos
+        run: ls -R
+
       - name: Validar HTML
-        run: html-validator --file=./typescript-frontend-crud/index.html --verbose
+        run: html-validator --file=./index.html --verbose
 
       - name: Validar CSS
-        run: css-validator ./typescript-frontend-crud/src/index.css
+        run: css-validator ./src/index.css
 
