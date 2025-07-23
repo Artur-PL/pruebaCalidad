@@ -26,5 +26,5 @@ jobs:
         run: html-validator --file=TYPESCRIPT-FRONTEND-CRUD/index.html  
 
       - name: Validar CSS
-        run: css-validator --file=src/index.css
+        run: css-validator --file=src/interfaces/index.css
 
