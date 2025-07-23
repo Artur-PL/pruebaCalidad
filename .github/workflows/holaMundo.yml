@@ -23,7 +23,7 @@ jobs:
         run: npm install -g css-validator
 
       - name: Validar HTML
-        run: html-validator --file=index.html  # <-- Cambia ruta si es necesario
+        run: html-validator --file="C:/Users/ASUS/OneDrive/Desktop/proyecto/typescript-frontend-crud/index.html"
 
       - name: Validar CSS
-        run: css-validator --file=src/index.css    # <-- Cambia ruta si es necesario
+        run: css-validator --file="C:/Users/ASUS/OneDrive/Desktop/proyecto/typescript-frontend-crud/src/index.css"
