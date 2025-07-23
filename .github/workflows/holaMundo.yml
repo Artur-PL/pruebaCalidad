@@ -23,7 +23,7 @@ jobs:
         run: npm install -g css-validator
 
       - name: Validar HTML
-        run: html-validator --file=index.html  
+        run: html-validator --file=TYPESCRIPT-FRONTEND-CRUD/index.html  
 
       - name: Validar CSS
         run: css-validator --file=src/index.css
