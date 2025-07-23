@@ -30,5 +30,4 @@ jobs:
         run: html-validator --file=./index.html --verbose
 
       - name: Validar CSS
-        run: css-validator ./src/style.css --warning=0
-
+        run: css-validator ./src/style.css
